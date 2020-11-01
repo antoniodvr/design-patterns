@@ -15,7 +15,7 @@ Instead of creating and disposing every time the time machine instances you can 
 ### Structure
 ![alt text](./etc/class-diagram.png "Object Pool Class Diagram")
 
-The ObjectPool can be enriched adding concept like:
+The ObjectPool can be enriched adding concepts like:
 * `poolableTimeout`: controls the maximum number of milliseconds that a client will wait for a poolable from the pool;
 * `minimumIdle`: to controls the minimum number of idle poolables to maintain in the pool;
 * `maximumPoolSize`: to controls the maximum size that the pool is allowed to reach, including both idle and in-use poolables;
