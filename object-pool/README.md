@@ -1,18 +1,18 @@
 # Object Pool Design Pattern
 
-##Intent
+## Intent
 In situations where the initialization cost of a class instance is expensive (allocation cost), the rate of instantiation of a class is high and the instances are needed only for short periods of time (memory fragmentation) it is advantageous to use the Object Pool pattern.
 
 The Object Pool orchestrates the objects creation and provides a cache for objects already instantiated.
 
-##Problem
+## Problem
 Imagine in your adventure game you need to use time machines to travel back in time, but the problem is that they are extremely expensive to create.
 
 Instead of creating and disposing every time the time machine instances you can re-use them through a pool.
 
-##Solution
+## Solution
 
-###Structure
+### Structure
 ![alt text](./etc/class-diagram.png "Object Pool Class Diagram")
 
 The ObjectPool can be enriched adding concept like:
@@ -22,7 +22,7 @@ The ObjectPool can be enriched adding concept like:
 * `idleTimeout`: to control the maximum amount of time that a poolable is allowed to sit idle in the pool);
 * `maxLifetime`: controls the maximum lifetime of a poolable in the pool. An in-use poolable will never be retired, only when it is released will it then be removed.
 
-###Code
+### Code
 Here's the `TimeMachine` which is really expensive to create:
 ```java
 public interface Poolable {
